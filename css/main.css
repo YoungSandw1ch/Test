@@ -323,6 +323,20 @@ button.swiper-pagination-bullet {
   }
 }
 
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button svg {
+  fill: turquoise;
+}
+
+.button svg:hover, .button svg:focus {
+  fill: violet;
+}
+
 .customers-reviews {
   position: relative;
   padding-top: 80px;
@@ -340,8 +354,8 @@ button.swiper-pagination-bullet {
   min-width: 280px;
   margin-left: auto;
   margin-right: auto;
-  padding: 43px 50px 26px;
   margin-bottom: 30px;
+  padding: 43px 50px 26px;
   background-color: #fafafa;
 }
 
@@ -364,32 +378,31 @@ button.swiper-pagination-bullet {
 }
 
 .swiper__dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 4px;
+  height: 4px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background-color: #c7133e;
+}
+
+.swiper__dots::before, .swiper__dots::after {
+  content: '';
+  position: absolute;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background-color: #c7133e;
-  margin-bottom: 18px;
 }
 
 .swiper__dots::before {
-  content: '';
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #c7133e;
+  right: 10px;
 }
 
 .swiper__dots::after {
-  content: '';
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #c7133e;
+  left: 10px;
 }
 
 .swiper__text {
@@ -465,6 +478,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-bullet-active {
   width: 13px;
   height: 12px;
+  border-radius: unset;
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;

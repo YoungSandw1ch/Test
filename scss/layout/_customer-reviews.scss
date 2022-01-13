@@ -27,8 +27,8 @@
   min-width: 280px;
   margin-left: auto;
   margin-right: auto;
-  padding: 43px 50px 26px;
   margin-bottom: 30px;
+  padding: 43px 50px 26px;
   background-color: #fafafa;
 
   @media screen and (max-width: 768px) {
@@ -51,32 +51,31 @@
 }
 
 .swiper__dots {
-  display: flex;
-  // margin-left: auto;
-  // margin-right: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   width: 4px;
   height: 4px;
+  margin-bottom: 18px;
   border-radius: 50%;
   background-color: #c7133e;
-  margin-bottom: 18px;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
-    display: block;
+    position: absolute;
     width: 4px;
     height: 4px;
     border-radius: 50%;
     background-color: #c7133e;
-    // margin-right: 10px;
+  }
+
+  &::before {
+    right: 10px;
   }
 
   &::after {
-    content: '';
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: #c7133e;
+    left: 10px;
   }
 }
 

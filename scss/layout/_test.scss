@@ -1,0 +1,11 @@
+.button {
+  display: flex;
+}
+.button svg {
+  fill: turquoise;
+
+  &:hover,
+  &:focus {
+    fill: violet;
+  }
+}
