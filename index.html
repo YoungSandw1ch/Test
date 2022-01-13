@@ -12,17 +12,76 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
       rel="stylesheet">
-   <link rel="stylesheet" href="./scss/styles.scss">
+   <link rel="stylesheet" href="./css/main.min.css">
    <link rel="shortcut icon" type="image/ico" href="./images/favicon.ico" />
+   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 </head>
 
 <body>
+   <section class="customers-reviews">
+      <div class="container">
+         <!-- Swiper -->
+         <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <h2 class="visually-hidden">Customers reviews</h2>
+                  <img class="swiper__img" src="./images/reviews/testimonials-1.png" alt="customer-girl" width="85"
+                     height="85">
+                  <div class="swiper__box">
+                     <p class="swiper__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
+                        sem. In hendrerit nulla quam nunc, accumsan
+                        congue. Lorem ipsum primis in nibh vel risus.</p>
+                  </div>
+                  <h3 class="swiper__title">Emily, Los Angeles</h3>
+               </div>
+               <div class="swiper-slide">Slide 2</div>
+               <div class="swiper-slide">Slide 3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+         </div>
+      </div>
+   </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Swiper JS ----------->
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Initialize Swiper --->
+   <script>
+      var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 1,
+         loop: true,
+         pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+               return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+         },
+      });
+   </script>
+   <!-- pop up-------------->
    <script src="../js/pop-up.js" type="module"></script>
+   <!-- body scroll--------->
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"></script>
+   <!-- mob menu------------>
    <script src="../js/mobile-menu.js" type="module"></script>
 </body>
 
