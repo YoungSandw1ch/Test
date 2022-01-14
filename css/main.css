@@ -351,12 +351,24 @@ button.swiper-pagination-bullet {
 }
 
 .swiper__box {
+  position: relative;
   min-width: 280px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
   padding: 43px 50px 26px;
   background-color: #fafafa;
+}
+
+.swiper__box::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 28px;
+  left: 61px;
+  width: 54px;
+  height: 40px;
+  background-image: url(../../images/reviews/brackets.png);
 }
 
 @media screen and (max-width: 768px) {
@@ -406,12 +418,15 @@ button.swiper-pagination-bullet {
 }
 
 .swiper__text {
+  position: relative;
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
   text-align: center;
   color: #000000;
+  max-width: 180px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
