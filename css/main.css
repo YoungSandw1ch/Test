@@ -352,6 +352,19 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.04em;
 }
 
+.test {
+  height: 100vh;
+}
+
+@media screen and (min-width: 1280px) {
+  .test {
+    background-image: url(.././images/sectionbg.png), -webkit-gradient(linear, left top, left bottom, color-stop(6%, white), color-stop(6%, rgba(255, 245, 246, 0.24)));
+    background-image: url(.././images/sectionbg.png), linear-gradient(180deg, white 6%, rgba(255, 245, 246, 0.24) 6%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .customers-reviews {
   position: relative;
   padding-top: 80px;
